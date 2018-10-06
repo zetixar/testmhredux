@@ -1,0 +1,30 @@
+.header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  padding: 20px 24px;
+  background: transparent;
+  padding: 20px 50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 20;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    height: 38px;
+  }
+
+  &.white {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+nav.main-menu div.nav-bar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+}
