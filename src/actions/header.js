@@ -1,7 +1,7 @@
-import { CHANGE_HEADER_BACKGROUND_COLOR } from 'constants/ActionTypes'
-import { createAction } from 'redux-actions'
+import { CHANGE_SLIDE } from "constants/ActionTypes"
+import { createAction } from "redux-actions"
 
-export const changeHeaderBackgroundColor = createAction(CHANGE_HEADER_BACKGROUND_COLOR)
+export const changeSlide = createAction(CHANGE_SLIDE)
 
 // export const decrement = createAction(DECREMENT_COUNTER)
 

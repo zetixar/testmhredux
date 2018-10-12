@@ -1,10 +1,10 @@
-import { CHANGE_HEADER_BACKGROUND_COLOR } from 'constants/ActionTypes'
+import { CHANGE_SLIDE } from 'constants/ActionTypes'
 
 const initialState = {backgroundColor: "black"}
 
-export default function counter(state = initialState, action) {
+export default function header(state = initialState, action) {
   switch (action.type) {
-    case CHANGE_HEADER_BACKGROUND_COLOR:
+    case CHANGE_SLIDE:
       // return {...state, backgroundColor: action.payload.backgroundColor}
       return {...state, backgroundColor: state.backgroundColor === "white" ? "black" : "white" }
 

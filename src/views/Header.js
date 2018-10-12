@@ -2,9 +2,9 @@ import React from "react"
 // import logo from "assets/logo.svg";
 import logo2 from "assets/A+E_Networks_white.svg"
 
-function Header({ backgroundColor }) {
+function Header({ headerBackgroundColor }) {
   return (
-    <div className={`header ${backgroundColor}`}>
+    <div className={`header ${headerBackgroundColor}`}>
       <img
         src={logo2}
         className={``}

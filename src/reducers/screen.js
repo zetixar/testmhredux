@@ -1,20 +1,30 @@
-export { default as CounterContainer } from "./CounterContainer"
-export { default as MainPage } from "./MainPageContainer"
-export { default as Header } from "./HeaderContainer"
+import { CHANGE_SLIDE } from "constants/ActionTypes"
 
-const state = {
-  header: {
-    color: "white"
-  },
+const initialState = {
+  headerBackgroundColor: "black",
+  activeSlideId: 0,
   slides: [
+    {
+      id: 0,
+      type: "infoto",
+      themeColor: "black",
+      backgroundImageUrl:
+        "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/05/Divisions_hero.jpeg?w=1440",
+      content: {
+        title: "آسوده خاطر",
+        text: "هدف ما این است که خیالتان را بابت هر گونه نگرانی حقوقی راحت و آسوده کنیم",
+        link: "اممم. چه جوریا؟"
+      }
+    },
     {
       id: 1,
       type: "infoto",
-      themeColor: "black",
-      backgroundImageURL: "",
+      themeColor: "white",
+      backgroundImageUrl:
+        "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/05/WhoWeAre3.jpg?h=1440&",
       content: {
-        title: "salam",
-        text: "inja body  hast",
+        title: "slide 2",
+        text: "inja body2  hast",
         link: "link"
       }
     },
@@ -27,6 +37,7 @@ const state = {
     {
       id: 3,
       type: "verticalSlides",
+      themeColor: "white",
       vSlides: [
         {
           id: 1,
@@ -49,7 +60,7 @@ const state = {
       id: 4,
       type: "infoto",
       themeColor: "black",
-      backgroundImageURL: "",
+      backgroundImageUrl: "",
       content: {
         title: "salam",
         text: "inja body  hast",
@@ -122,6 +133,31 @@ const state = {
         link: "link"
       }
     }
-  ],
-  activeSlideId: 1
+  ]
+}
+
+export default function counter(state = initialState, action) {
+  let nextId
+  switch (action.type) {
+    case CHANGE_SLIDE:
+      // return {...state, backgroundColor: action.payload.backgroundColor}
+      nextId = state.activeSlideId
+      if (
+        action.payload === "next" &&
+        state.slides.length - 1 > state.activeSlideId
+      ) {
+        nextId = state.activeSlideId + 1
+      }
+      if (action.payload === "prev" && state.activeSlideId > 0) {
+        nextId = state.activeSlideId - 1
+      }
+      return {
+        ...state,
+        headerBackgroundColor: state.slides[nextId].themeColor,
+        activeSlideId: nextId
+      }
+
+    default:
+      return state
+  }
 }
