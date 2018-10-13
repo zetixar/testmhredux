@@ -10,13 +10,12 @@
   padding: 24px 24px 80px 24px;
   color: #fff;
 }
-.boogh {
+.animated-underlined-title {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  height: inherit;
 }
-.boogh:after {
+.animated-underlined-title:after {
   content: "";
   position: relative;
   margin-top: 3px;
@@ -24,9 +23,8 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  animation: ssssss 1.5s;
+  animation: ssssss 1.5s 2s;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
 }
 
 @keyframes ssssss {

@@ -7,12 +7,8 @@ const fadeIn = keyframes`
 `
 
 const moveUp = keyframes`
-    0%   { top:60px;}
-    25%  { top:45x;}
-    50%  { top:30px;}
-    75%  { top:15px;}
-    100% { top:0px;}
-  }
+  from { top: 100px; }
+  to { top: 0px; }
 `
 const Img = styled.div`
   /* Full height */
@@ -51,19 +47,22 @@ const Slide = ({ slide }) => (
           style={{
             color: "white",
             fontSize: 22,
-            display: "flex",
-            flexDirection: "column",
-            // animation: `${moveUp} 1s linear`
-            // transition: `all 3s ease-in`
+            position: "relative",
+            animation: `${moveUp} 1.7s`
           }}
         >
-          <div style={{}}>
-            <div className="boogh">{slide.content.title}</div>
-          </div>
+          <div className="animated-underlined-title">{slide.content.title}</div>
+
           <p>{slide.content.text}</p>
           <div>{slide.content.link}</div>
         </div>
       </Img>
+    )}
+    {slide.type === "photoSlide" && (
+      <div></div>
+
+
+
     )}
   </div>
 )
