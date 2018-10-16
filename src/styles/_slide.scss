@@ -23,11 +23,10 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  animation: ssssss 1.5s 2s;
-  animation-fill-mode: forwards;
+  animation: extend 1.5s 2s;
 }
 
-@keyframes ssssss {
+@keyframes extend {
   from {
     width: 0px;
   }
@@ -35,6 +34,68 @@
     width: 100%;
   }
 }
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.mini-slides-parent {
+  opacity: 0;
+  animation: fade-in-right ease 1s 0.5s forwards;
+  // width: "500px",
+  display: flex;
+  // align-items: center;
+  justify-content: flex-start;
+  // // position: "relative",
+  // // right: `${this.state.offset}px`,
+  // transform: `translateX(10vw)`,
+  // transformOrigin: "right",
+  // //
+  //           position: relative
+  // transform: translateX(100vh);
+  // left: 500px;
+  // animation: ssss 2s 0.5s;
+  // animation-fill-mode: forwards;
+}
+
+.mini-slides-container {
+  // opacity: 0;
+  // animation: fade-in-right ease 1s 0.5s forwards;
+  // width: "500px",
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  // // position: "relative",
+  // // right: `${this.state.offset}px`,
+  // transform: `translateX(10vw)`,
+  // transformOrigin: "right",
+  // //
+  //           position: relative
+  // transform: translateX(100vh);
+  // left: 500px;
+  // animation: ssss 2s 0.5s;
+  // animation-fill-mode: forwards;
+}
+@keyframes ssss {
+  from {
+    left: 500px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.mini-slide {
+  width: 200px;
+  height: 300px;
+}
+
 h3 {
   position: relative;
 }

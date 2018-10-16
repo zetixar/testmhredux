@@ -6,11 +6,7 @@ import Screen from "./ScreenContainer"
 // import whoWeAre from '../assets/WhoWeAre3.jpg'
 // const Intro = styled.p`font-size: large;`
 
-const MainPage = () => (
-  <div>
-    <Screen />
-  </div>
-)
+const MainPage = () => <Screen />
 
 // MainPage.propTypes = {
 //   increment: PropTypes.func.isRequired,

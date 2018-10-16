@@ -1,7 +1,7 @@
 import React from "react"
-import throttle from "lodash/throttle"
+import { throttle } from "lodash"
 import Slide from "./Slide"
-
+import MiniSlide from "./MiniSlide"
 const Screen = ({ slide, changeSlide }) => (
   <div
     onWheel={throttle(e => changeSlide(e.deltaY > 0 ? "next" : "prev"), 300, {
@@ -9,7 +9,8 @@ const Screen = ({ slide, changeSlide }) => (
     })}
     style={{ height: "100vh", width: "100vw" }}
   >
-    <Slide slide={slide} />
+    {slide.type === "infoto" && <Slide slide={slide} />}
+    {slide.type === "miniSlides" && <MiniSlide slide={slide} />}
   </div>
 )
 

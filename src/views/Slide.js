@@ -30,40 +30,32 @@ const Img = styled.div`
 // #35a257
 const Slide = ({ slide }) => (
   <div>
-    {slide.type === "infoto" && (
-      <Img
-        key={slide.id}
-        style={{
-          animation: `${fadeIn} 2s`,
-          backgroundImage: `linear-gradient(
+    <Img
+      key={slide.id}
+      style={{
+        animation: `${fadeIn} 2s`,
+        backgroundImage: `linear-gradient(
               to right,
               rgba(0, 0, 0, 0.8),
               rgba(0, 0, 0, 0)
             ),
             url(${slide.backgroundImageUrl})`
+      }}
+    >
+      <div
+        style={{
+          color: "white",
+          fontSize: 22,
+          position: "relative",
+          animation: `${moveUp} 1.7s`
         }}
       >
-        <div
-          style={{
-            color: "white",
-            fontSize: 22,
-            position: "relative",
-            animation: `${moveUp} 1.7s`
-          }}
-        >
-          <div className="animated-underlined-title">{slide.content.title}</div>
+        <div className="animated-underlined-title">{slide.content.title}</div>
 
-          <p>{slide.content.text}</p>
-          <div>{slide.content.link}</div>
-        </div>
-      </Img>
-    )}
-    {slide.type === "photoSlide" && (
-      <div></div>
-
-
-
-    )}
+        <p>{slide.content.text}</p>
+        <div>{slide.content.link}</div>
+      </div>
+    </Img>
   </div>
 )
 

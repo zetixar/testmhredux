@@ -5,6 +5,43 @@ const initialState = {
   activeSlideId: 0,
   slides: [
     {
+      id: 20,
+      type: "miniSlides",
+      themeColor: "white",
+      Slides: [
+        {
+          id: 1,
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/wentan-copy-copy.jpg?w=450",
+          title: ""
+        },
+        {
+          id: 2,
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/HeroImage-template-1920-shari-3.png?w=450",
+          title: ""
+        },
+        {
+          id: 3,
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/HeroImage-template-1920-shari-3.png?w=450",
+          title: ""
+        },
+        {
+          id: 4,
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/wentan-copy-copy.jpg?w=450",
+          title: ""
+        },
+        {
+          id: 5,
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/wentan-copy-copy.jpg?w=450",
+          title: ""
+        }
+      ]
+    },
+    {
       id: 0,
       type: "infoto",
       themeColor: "black",
@@ -12,7 +49,8 @@ const initialState = {
         "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/05/Divisions_hero.jpeg?w=1440",
       content: {
         title: "آسوده خاطر",
-        text: "هدف ما این است که خیالتان را بابت هر گونه نگرانی حقوقی راحت و آسوده کنیم",
+        text:
+          "هدف ما این است که خیالتان را بابت هر گونه نگرانی حقوقی راحت و آسوده کنیم",
         link: "اممم. چه جوریا؟"
       }
     },
@@ -30,28 +68,50 @@ const initialState = {
     },
     {
       id: 2,
-      type: "clip",
-      themeColor: "black",
-      clipUrl: ""
-    },
-    {
-      id: 3,
-      type: "verticalSlides",
+      type: "miniSlides",
       themeColor: "white",
-      vSlides: [
+      Slides: [
         {
           id: 1,
-          imageUrl: "",
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/wentan-copy-copy.jpg?w=450",
           title: ""
         },
         {
           id: 2,
-          imageUrl: "",
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/HeroImage-template-1920-shari-3.png?w=450",
           title: ""
         },
         {
           id: 3,
-          imageUrl: "",
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/HeroImage-template-1920-shari-3.png?w=450",
+          title: ""
+        }
+      ]
+    },
+    {
+      id: 3,
+      type: "miniSlides",
+      themeColor: "white",
+      Slides: [
+        {
+          id: 1,
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/wentan-copy-copy.jpg?w=450",
+          title: ""
+        },
+        {
+          id: 2,
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/HeroImage-template-1920-shari-3.png?w=450",
+          title: ""
+        },
+        {
+          id: 3,
+          imageUrl:
+            "https://cropper.watch.aetnd.com/cdn.aenetworks.com/2018/10/HeroImage-template-1920-shari-3.png?w=450",
           title: ""
         }
       ]
@@ -132,6 +192,12 @@ const initialState = {
         text: "inja body  hast",
         link: "link"
       }
+    },
+    {
+      id: 6,
+      type: "clip",
+      themeColor: "black",
+      clipUrl: ""
     }
   ]
 }
